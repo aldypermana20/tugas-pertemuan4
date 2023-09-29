@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class HitungLuasBangunDatar {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Program Hitung Luas Bangun Datar");
+        System.out.println("1. Persegi");
+        System.out.println("2. Segitiga");
+        System.out.println("3. Lingkaran");
+        System.out.print("Masukkan pilihan (1/2/3): ");
+        int pilihan = input.nextInt();
+
+        switch (pilihan) {
+            case 1:
+                // Persegi
+                System.out.print("Masukkan panjang sisi: ");
+                double sisi = input.nextDouble();
+                double luasPersegi = sisi * sisi;
+                System.out.println("Luas Persegi: " + luasPersegi);
+                break;
+
+            case 2:
+                // Segitiga
+                System.out.print("Masukkan alas: ");
+                double alas = input.nextDouble();
+                System.out.print("Masukkan tinggi: ");
+                double tinggi = input.nextDouble();
+                double luasSegitiga = 0.5 * alas * tinggi;
+                System.out.println("Luas Segitiga: " + luasSegitiga);
+                break;
+
+            case 3:
+                // Lingkaran
+                System.out.print("Masukkan jari-jari: ");
+                double jariJari = input.nextDouble();
+                double luasLingkaran = Math.PI * jariJari * jariJari;
+                System.out.println("Luas Lingkaran: " + luasLingkaran);
+                break;
+
+            default:
+                System.out.println("Pilihan tidak valid.");
+        }
+
+        input.close();
+    }
+}
